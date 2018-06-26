@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <configSections>
+
+      <section name="Permission" type="A user should be able to read a XML file" requirePermission="True" />
+  </configSections>
+
+</configuration>

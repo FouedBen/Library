@@ -7,10 +7,10 @@
     {
 <li>@Html.ActionLink("Add User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
     }
-    else if (User.IsInRole("Able to read a text ﬁle"))
+    else if (User.IsInRole("Able to read a XML ﬁle"))
     {
      
-            var dataFile = Server.MapPath("~/App_Data/TextFile.txt");
+            var dataFile = Server.MapPath("~/App_Data/XMLFile.xml");
             Array Data = File.ReadAllLines(dataFile);
         
 
