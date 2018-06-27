@@ -209,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\EncryptedTextFile.txt" />
+    <Content Include="App_Data\EncryptedXMLFile.xml" />
     <Content Include="App_Data\TextFile.txt" />
     <Content Include="App_Data\XMLFile.xml" />
     <Content Include="Content\bootstrap.css" />
