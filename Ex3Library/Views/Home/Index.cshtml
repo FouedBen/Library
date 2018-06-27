@@ -7,25 +7,21 @@
     {
 <li>@Html.ActionLink("Add User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
     }
-             else if (User.IsInRole("Able to read an encrypted XML ﬁle"))
-        {
-
-            var dataFile = Server.MapPath("~/App_Data/EncryptedXMLFile.xml");
+    else if (User.IsInRole("Able to read a text ﬁle in role based security context"))
+    {
+     
+            var dataFile = Server.MapPath("~/App_Data/TextFile.txt");
             Array Data = File.ReadAllLines(dataFile);
+        
 
-            Array.Reverse(Data);
 
-        < h1 > Reading Data from a File</ h1 >
+        <h1>Reading Data from a File</h1>
         foreach (string dataLine in Data)
-            {
-
-                char[] charArray = dataLine.ToCharArray();
-                Array.Reverse(charArray);
-                string dataLineReverset = new string(charArray);
-                foreach (string dataItem in dataLineReverset.Split(','))
-                { @dataItem < text > &nbsp;</ text >}
-            < br />
+        {
+            foreach (string dataItem in dataLine.Split(','))
+            {@dataItem <text>&nbsp;</text>}
+            <br />
         }
-        }
-
     }
+
+}
