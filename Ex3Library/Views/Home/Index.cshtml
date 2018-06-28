@@ -7,22 +7,18 @@
     {
 <li>@Html.ActionLink("Add User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
     }
-    else if (User.IsInRole("Able to read an encrypted JSON ﬁle"))
+    else if (User.IsInRole("Able to read a JSON ﬁle in role based security context"))
     {
+     
+            var dataFile = Server.MapPath("~/App_Data/JSONFile.json");
+            Array Data = File.ReadAllLines(dataFile);
+        
 
-        var dataFile = Server.MapPath("~/App_Data/EncryptedJSONFile.JSON");
-        Array Data = File.ReadAllLines(dataFile);
-
-        Array.Reverse(Data);
 
         <h1>Reading Data from a File</h1>
         foreach (string dataLine in Data)
         {
-
-            char[] charArray = dataLine.ToCharArray();
-            Array.Reverse(charArray);
-            string dataLineReverset = new string(charArray);
-            foreach (string dataItem in dataLineReverset.Split(','))
+            foreach (string dataItem in dataLine.Split(','))
             {@dataItem <text>&nbsp;</text>}
             <br />
         }
