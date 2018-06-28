@@ -7,10 +7,10 @@
     {
 <li>@Html.ActionLink("Add User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
     }
-    else if (User.IsInRole("Able to read a text ﬁle in role based security context"))
+    else if (User.IsInRole("Able to read a JSON ﬁle"))
     {
      
-            var dataFile = Server.MapPath("~/App_Data/TextFile.txt");
+            var dataFile = Server.MapPath("~/App_Data/JSONFile.json");
             Array Data = File.ReadAllLines(dataFile);
         
 
